@@ -1,8 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-light bg-light p-3">
     <div class="container-fluid">
-      <router-link class="nav-link fw-bold fs-3" to="/"><i class="bi bi-arrow-right-square"></i>LIU MIN YAO</router-link>
-      <router-link class="nav-link fw-bold fs-3" to="/about"><i class="bi bi-arrow-right-square"></i>LIU MIN YAO</router-link>
+      <router-link class="nav-link fw-bold fs-3 d-flex" to="/about"
+        ><i class="bi bi-arrow-right-square"></i>
+        <h1>LIU MIN YAO</h1></router-link
+      >
       <button
         class="navbar-toggler"
         type="button"
@@ -15,7 +17,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 w-100 justify-content-end">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>

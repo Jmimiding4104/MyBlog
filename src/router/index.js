@@ -9,8 +9,20 @@ const router = createRouter({
       component: () => import('@/views/FrontView.vue'),
       children: [
         {
-          path: 'about',
+          path: '/about',
           component: () => import('@/views/HomeView.vue')
+        },
+        {
+          path: '/resume',
+          component: () => import('@/views/ResumeView.vue')
+        },
+        {
+          path: '/product',
+          component: () => import('@/views/ProductView.vue')
+        },
+        {
+          path: '/contact',
+          component: () => import('@/views/ContactView.vue')
         }
       ]
     }

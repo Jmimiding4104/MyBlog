@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-light bg-light p-3">
     <div class="container-fluid">
-      <router-link class="nav-link fw-bold fs-3 d-flex" to="/about"
+      <router-link to="/about" class="nav-link fw-bold fs-3 d-flex"
         ><i class="bi bi-arrow-right-square"></i>
         <h1>LIU MIN YAO</h1></router-link
       >
@@ -19,31 +19,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-md-0 w-100 justify-content-end">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <router-link to="/about" class="nav-link" aria-current="page" href="#">ABOUT ME</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <router-link to="/resume" class="nav-link" href="#">RESUME</router-link>
           </li>
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action11</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <router-link to="/product" class="nav-link" href="#">PROJECTS</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <router-link to="/contact" class="nav-link">CONTACT</router-link>
           </li>
         </ul>
       </div>

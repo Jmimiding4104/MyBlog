@@ -3,7 +3,6 @@ import './assets/style.scss'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
-import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
  
 
@@ -16,3 +15,5 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
+
+console.log(123)

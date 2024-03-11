@@ -2,15 +2,17 @@
   <div class="about d-flex align-items-center justify-content-center position-relative">
     <div class="card mb-3 d-flex" style="max-width: 960px">
       <div class="row g-0">
-        <div class="col-md-4 d-flex flex-column p-3">
-          <div class="d-flex justify-content-center">
+        <div class="col-md-4 d-flex flex-column justify-content-between p-0">
+          <div class="d-flex flex-column justify-content-center pt-5 px-5 pb-3">
             <img
               src="../assets/images/5415.jpg"
               class="img-fluid rounded-circle title-img"
               alt="大頭照"
             />
+            <h2 class="text-center mt-4">LIU MIN YAO</h2>
+            <div class="line mt-4 position-relative"></div>
           </div>
-          <ul class="d-flex justify-content-around list-unstyled mt-3 mb-0">
+          <ul class="d-flex justify-content-between list-unstyled mb-0 px-5 py-3">
             <li>
               <a href="#"><i class="bi bi-facebook"></i></a>
             </li>
@@ -23,15 +25,25 @@
           </ul>
         </div>
         <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.
+          <div class="card-body pt-5 px-5 pb-3 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h2 class="card-title fs-80">HELLO</h2>
+              <p class="card-text fs-2">Here's who I am & what I do</p>
+              <div class="card-text">
+                <button type="button" class="btn btn-secondary me-2 fs-5"><router-link to="/resume" class="nav-link" href="#">RESUME</router-link></button
+                ><button type="button" class="btn btn-outline-secondary fs-5"><router-link to="/product" class="nav-link" href="#">PROJECTS</router-link></button>
+              </div>
+            </div>
+            <p class="card-text mt-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, incidunt ipsum,
+              omnis accusantium quaerat quasi velit quia unde delectus maxime veritatis at hic ad
+              assumenda deserunt exLorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
+              incidunt ipsum, omnis accusantium quaerat quasi velit quia unde delectus maxime
+              veritatis at hic ad assumenda deserunt ex voluptatem placeat odit?dolor sit amet consectetur adipisicing elit. Tenetur,
+              incidunt ipsum, omnis accusantium quaerat quasi velit quia unde delectus maxime
+              veritatis at hic ad assumenda deserunt ex voluptatem placeat odit?
             </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
-          <button type="button" class="btn btn-secondary">Left</button>
         </div>
       </div>
     </div>
@@ -44,15 +56,30 @@
   background-image: url('@/assets/images/kateryna-hliznitsova-gur97TCS0aQ-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: 50% 100%;
-}
-
-.about::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(5px);
-  z-index: 0;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 0;
+  }
+  .line::before {
+    position: absolute;
+    content: '';
+    width: 30%;
+    height: 1px;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  ul a {
+    color: gray;
+    font-size: 3em;
+    &:hover {
+      color: black;
+    }
+  }
 }
 
 .title-img {
@@ -60,5 +87,4 @@
   object-position: center;
   aspect-ratio: 1 / 1;
 }
-
 </style>

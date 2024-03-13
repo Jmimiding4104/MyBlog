@@ -31,7 +31,7 @@
               <p class="card-text fs-2">Here's who I am & what I do</p>
               <div class="card-text">
                 <button type="button" class="btn btn-secondary me-2 fs-5"><router-link to="/resume" class="nav-link" href="#">RESUME</router-link></button
-                ><button type="button" class="btn btn-outline-secondary fs-5"><router-link to="/product" class="nav-link" href="#">PROJECTS</router-link></button>
+                ><button type="button" class="btn btn-outline-secondary fs-5"><router-link to="/about" class="nav-link" href="#">ABOUT ME</router-link></button>
               </div>
             </div>
             <p class="card-text mt-3">

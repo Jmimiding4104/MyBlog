@@ -4,7 +4,8 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import "bootstrap";
- 
+import axios from 'axios'; 
+import VueAxios from 'vue-axios'
 
 import App from './App.vue'
 import router from './router'
@@ -19,5 +20,6 @@ router.afterEach((to, from, next) => {
 
 app.use(createPinia())
 app.use(router)
+app.use(VueAxios, axios)
 
 app.mount('#app')

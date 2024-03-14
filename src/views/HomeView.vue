@@ -1,3 +1,20 @@
+<script>
+export default {
+  data() {
+    return {}
+  },
+  mounted() {
+    this.$http.get(`https://myblogapi-v3b7.onrender.com`)
+    .then((res) => {
+      console.log(res)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }
+}
+</script>
+
 <template>
   <div class="about d-flex align-items-center justify-content-center position-relative">
     <div class="card mb-3 d-flex" style="max-width: 960px">
@@ -30,8 +47,11 @@
               <h2 class="card-title fs-80">HELLO</h2>
               <p class="card-text fs-2">Here's who I am & what I do</p>
               <div class="card-text">
-                <button type="button" class="btn btn-secondary me-2 fs-5"><router-link to="/resume" class="nav-link" href="#">RESUME</router-link></button
-                ><button type="button" class="btn btn-outline-secondary fs-5"><router-link to="/about" class="nav-link" href="#">ABOUT ME</router-link></button>
+                <button type="button" class="btn btn-secondary me-2 fs-5">
+                  <router-link to="/resume" class="nav-link" href="#">RESUME</router-link></button
+                ><button type="button" class="btn btn-outline-secondary fs-5">
+                  <router-link to="/about" class="nav-link" href="#">ABOUT ME</router-link>
+                </button>
               </div>
             </div>
             <p class="card-text mt-3">
@@ -39,9 +59,10 @@
               omnis accusantium quaerat quasi velit quia unde delectus maxime veritatis at hic ad
               assumenda deserunt exLorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
               incidunt ipsum, omnis accusantium quaerat quasi velit quia unde delectus maxime
-              veritatis at hic ad assumenda deserunt ex voluptatem placeat odit?dolor sit amet consectetur adipisicing elit. Tenetur,
-              incidunt ipsum, omnis accusantium quaerat quasi velit quia unde delectus maxime
-              veritatis at hic ad assumenda deserunt ex voluptatem placeat odit?
+              veritatis at hic ad assumenda deserunt ex voluptatem placeat odit?dolor sit amet
+              consectetur adipisicing elit. Tenetur, incidunt ipsum, omnis accusantium quaerat quasi
+              velit quia unde delectus maxime veritatis at hic ad assumenda deserunt ex voluptatem
+              placeat odit?
             </p>
           </div>
         </div>

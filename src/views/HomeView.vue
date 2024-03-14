@@ -1,20 +1,3 @@
-<script>
-export default {
-  data() {
-    return {}
-  },
-  mounted() {
-    this.$http.get(`https://myblogapi-v3b7.onrender.com`)
-    .then((res) => {
-      console.log(res)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-  }
-}
-</script>
-
 <template>
   <div class="about d-flex align-items-center justify-content-center position-relative">
     <div class="card mb-3 d-flex" style="max-width: 960px">
@@ -70,6 +53,18 @@ export default {
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {}
+  },
+  mounted() {
+    this.$http
+      .get('https://myblogapi-v3b7.onrender.com')
+  }
+}
+</script>
 
 <style lang="scss">
 .about {

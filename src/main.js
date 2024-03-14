@@ -10,8 +10,6 @@ import VueAxios from 'vue-axios'
 import App from './App.vue'
 import router from './router'
 
-import Swiper from 'swiper';
-
 const app = createApp(App)
 
 router.afterEach((to, from, next) => {

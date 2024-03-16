@@ -1,9 +1,12 @@
 @import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/mixins";
 
-@import "./helpers/variables";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import './helpers/variables';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
-@import "bootstrap-icons/font/bootstrap-icons.css";
+@import 'bootstrap-icons/font/bootstrap-icons.css';
 
-@import "./helpers/base.scss";
-@import "./helpers/utilities.scss";
+@import './helpers/base.scss';
+@import './helpers/utilities.scss';
+
+

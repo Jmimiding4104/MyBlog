@@ -1,6 +1,6 @@
 <template>
   <div class="about d-flex align-items-center justify-content-center position-relative">
-    <div class="card mb-3 d-flex" style="max-width: 960px">
+    <div class="card mb-0 d-flex" style="max-width: 960px">
       <div class="row g-0">
         <div class="col-md-4 d-flex flex-column justify-content-between p-0">
           <div class="d-flex flex-column justify-content-center pt-5 px-5 pb-3">

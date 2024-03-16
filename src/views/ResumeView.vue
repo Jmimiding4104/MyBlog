@@ -21,26 +21,36 @@
         >
       </swiper>
       <p v-else>RENDER 尚在熱機，麻煩30秒後重試~</p>
-
-      <h3>Education</h3>
-      <swiper
-        v-if="education.length > 0"
-        :slidesPerView="1"
-        :spaceBetween="30"
-        :pagination="{
-          clickable: true
-        }"
-        :navigation="true"
-        :modules="modules"
-        class="mySwiper"
-        :loop="true"
-        ref="swiper"
-      >
-        <swiper-slide v-for="item in education"
-          ><div class="p-5">{{ item }}</div></swiper-slide
+      <div class="mt-5">
+        <h3>Education</h3>
+        <swiper
+          v-if="education.length > 0"
+          :slidesPerView="1"
+          :spaceBetween="30"
+          :pagination="{
+            clickable: true
+          }"
+          :navigation="true"
+          :modules="modules"
+          class="mySwiper"
+          :loop="true"
+          ref="swiper"
         >
-      </swiper>
-      <p v-else>RENDER 尚在熱機，麻煩30秒後重試~</p>
+          <swiper-slide v-for="item in education"
+            ><div class="p-5">{{ item }}</div></swiper-slide
+          >
+        </swiper>
+        <p v-else>RENDER 尚在熱機，麻煩30秒後重試~</p>
+      </div>
+      <div class="mt-5">
+        <h3>Languages</h3>
+        <ul class="list-unstyled row">
+          <ProgressLine title="中文" stage="精通" :range="90"></ProgressLine>
+          <ProgressLine title="英語" stage="多益560分" :range="40"></ProgressLine>
+          <ProgressLine title="台語" stage="可聽" :range="20"></ProgressLine>
+          <ProgressLine title="客語" stage="可聽略說" :range="30"></ProgressLine>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -54,10 +64,13 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
+import ProgressLine from '@/components/ProgressLine.vue'
+
 export default {
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
+    ProgressLine
   },
   setup() {
     let experience = ref({})

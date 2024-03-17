@@ -60,8 +60,7 @@ export default {
     return {}
   },
   mounted() {
-    this.$http
-      .get('https://myblogapi-v3b7.onrender.com')
+    this.$http.get('https://myblogapi-v3b7.onrender.com')
   }
 }
 </script>

@@ -19,7 +19,7 @@ export default {
 
 <template>
   <Navbar />
-  <router-view />
+  <router-view  />
   <Footer />
 </template>
 

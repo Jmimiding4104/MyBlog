@@ -25,8 +25,8 @@
             <router-link to="/resume" class="nav-link border-bottom" href="#">RESUME</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/about" class="nav-link" aria-current="page" href="#"
-              >ABOUT</router-link
+            <router-link to="/application" class="nav-link" aria-current="page" href="#"
+              >APPLICATION</router-link
             >
           </li>
         </ul>

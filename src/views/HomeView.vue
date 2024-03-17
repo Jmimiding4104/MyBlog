@@ -2,7 +2,10 @@
   <div class="about d-flex align-items-center justify-content-center position-relative">
     <div class="card mb-0 d-flex" style="max-width: 960px">
       <div class="row g-0">
-        <div class="col-md-4 d-flex flex-column justify-content-between p-0">
+        <div
+          class="col-md-4 d-flex flex-column justify-content-between p-0"
+          style="background-color: #A3D1D1"
+        >
           <div class="d-flex flex-column justify-content-center pt-5 px-5 pb-3">
             <img
               src="../assets/images/5415.jpg"
@@ -33,7 +36,7 @@
                 <button type="button" class="btn btn-secondary me-2 fs-5">
                   <router-link to="/resume" class="nav-link" href="#">RESUME</router-link></button
                 ><button type="button" class="btn btn-outline-secondary fs-5">
-                  <router-link to="/about" class="nav-link" href="#">ABOUT ME</router-link>
+                  <router-link to="/application" class="nav-link" href="#">APPLICATION</router-link>
                 </button>
               </div>
             </div>
@@ -68,7 +71,7 @@ export default {
 <style lang="scss">
 .about {
   min-height: 100vh;
-  background-image: url('@/assets/images/kateryna-hliznitsova-gur97TCS0aQ-unsplash.jpg');
+  background: linear-gradient(to left, #c4e1e1 100%, #eee 50%);
   background-repeat: no-repeat;
   background-size: 50% 100%;
   &::before {
@@ -94,6 +97,9 @@ export default {
     &:hover {
       color: black;
     }
+  }
+  .card {
+    box-shadow: -5px 5px 5px gray;
   }
 }
 

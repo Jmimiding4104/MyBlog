@@ -11,7 +11,7 @@ export const loadingStore = defineStore('loading', {
       this.isLoading = true
       setTimeout(() => {
         this.isLoading = false
-      }, 1200)
+      }, 700)
     }
   },
 });

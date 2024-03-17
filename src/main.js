@@ -20,6 +20,7 @@ import { loadingStore } from './stores/loading'
 router.afterEach((to, from, next) => {
 	window.scrollTo(0, 0);
 	const store = loadingStore(pinia)
+	store.doAjax()
 });
 
 app.use(createPinia())

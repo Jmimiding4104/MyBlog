@@ -1,76 +1,41 @@
 <template>
-  <div class="container py-5 my-5">
-    <h2 class="text-center fs-1">RESUME</h2>
-    <div class="mw-80p">
-      <h3>Eperince</h3>
-      <swiper
-        v-if="experience.length > 0"
-        :slidesPerView="1"
-        :spaceBetween="30"
-        :pagination="{
-          clickable: true
-        }"
-        :navigation="true"
-        :modules="modules"
-        class="mySwiper"
-        :loop="true"
-        ref="swiper"
-      >
-        <swiper-slide v-for="item in experience"
-          ><div class="p-5">{{ item }}</div></swiper-slide
-        >
-      </swiper>
-      <p v-else>RENDER 尚在熱機，麻煩30秒後重試~</p>
-      <div class="mt-5">
-        <h3>Education</h3>
-        <swiper
-          v-if="education.length > 0"
-          :slidesPerView="1"
-          :spaceBetween="30"
-          :pagination="{
-            clickable: true
-          }"
-          :navigation="true"
-          :modules="modules"
-          class="mySwiper"
-          :loop="true"
-          ref="swiper"
-        >
-          <swiper-slide v-for="item in education"
-            ><div class="p-5">{{ item }}</div></swiper-slide
-          >
-        </swiper>
-        <p v-else>RENDER 尚在熱機，麻煩30秒後重試~</p>
-      </div>
-      <div class="mt-5">
-        <h3>Languages</h3>
-        <ul class="list-unstyled row">
-          <ProgressLine title="中文" stage="精通" :range="90"></ProgressLine>
-          <ProgressLine title="英語" stage="多益560分" :range="40"></ProgressLine>
-          <ProgressLine title="台語" stage="可聽" :range="20"></ProgressLine>
-          <ProgressLine title="客語" stage="可聽略說" :range="30"></ProgressLine>
-        </ul>
+  <div class="resume" style="background-color: #A3D1D1">
+    <div class="container py-5">
+      <h2 class="text-center fs-1 fw-bold mb-5">RESUME</h2>
+      <div class="mw-80p">
+        <div class="p-5 border-resume" style="background-color: #D1E9E9">
+          <h3 class=" fs-1 fw-bold">EXPERIENCE</h3>
+          <ResumeSwiper :title="experience" />
+        </div>
+        <div class="mt-5 p-5 border-resume" style="background-color: #d1e9e9">
+          <h3 class="fw-bold fs-1">EDUCATION</h3>
+          <ResumeSwiper :title="education" />
+        </div>
+        <div class="mt-5 p-5 border-resume" style="background-color: #d1e9e9">
+          <h3 class="fw-bold fs-1">Languages</h3>
+          <ul class="list-unstyled row">
+            <ProgressLine title="中文" stage="精通" :range="90" />
+            <ProgressLine title="英語" stage="多益560分" :range="40" />
+            <ProgressLine title="台語" stage="可聽" :range="20" />
+            <ProgressLine title="客語" stage="可聽略說" :range="30" />
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Pagination, Navigation } from 'swiper/modules'
 import { onMounted, ref } from 'vue'
 import axios from 'axios'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
 
 import ProgressLine from '@/components/ProgressLine.vue'
+import ResumeSwiper from '@/components/ResumeSwiper.vue'
 
 export default {
   components: {
-    Swiper,
-    SwiperSlide,
-    ProgressLine
+    ProgressLine,
+    ResumeSwiper
   },
   setup() {
     let experience = ref({})
@@ -85,7 +50,6 @@ export default {
       })
     })
     return {
-      modules: [Pagination, Navigation],
       experience,
       education,
       swiper
@@ -95,48 +59,12 @@ export default {
 </script>
 
 <style>
-html,
-body {
-  position: relative;
-  height: 100%;
+.resume{
+  .card {
+    box-shadow: -5px 10px 10px gray;
+  }
 }
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: #000;
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff;
+.border-resume {
+  border: 0.5rem #6fb7b7 solid;
 }
 </style>
